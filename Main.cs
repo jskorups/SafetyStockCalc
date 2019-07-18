@@ -21,7 +21,6 @@ namespace SafetyStockCalc
         {
             Calculation newCalc = new Calculation(modificationNameTxtBox.Text, Convert.ToDateTime(dateTimepickerOd.Text), Convert.ToDateTime(dateTimePickerDo.Text), Convert.ToDecimal(itemPriceTxtBox.Text), Convert.ToInt32(numericUpDownCycleTime.Text));
 
-
             try
             {
                 if (newCalc.endDate >= newCalc.beginDate)
@@ -34,7 +33,7 @@ namespace SafetyStockCalc
                 }
                 else
                 {
-                    MessageBox.Show("Data rozpoczęcia nie może byc mniesza od daty zakończenia");
+                    MessageBox.Show("Data rozpoczęcia nie może byc mniejsza od daty zakończenia");
                 }
             }
             catch (Exception ex)
