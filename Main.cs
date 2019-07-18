@@ -15,11 +15,14 @@ namespace SafetyStockCalc
         public Main()
         {
             InitializeComponent();
+
+            listDividers.DataSource = Calculation.dividingVars.Keys.ToList();
+            listDividers.da
         }
 
         private void calcBtn_Click(object sender, EventArgs e)
         {
-            Calculation newCalc = new Calculation(modificationNameTxtBox.Text, Convert.ToDateTime(dateTimepickerOd.Text), Convert.ToDateTime(dateTimePickerDo.Text), Convert.ToDecimal(itemPriceTxtBox.Text), Convert.ToInt32(numericUpDownCycleTime.Text));
+            Calculation newCalc = new Calculation(SapTxtBox.Text,modName.Text, Convert.ToDateTime(dateTimepickerOd.Text), Convert.ToDateTime(dateTimePickerDo.Text), Convert.ToDecimal(itemPriceTxtBox.Text), Convert.ToInt32(numericUpDownCycleTime.Text));
 
             try
             {
@@ -27,9 +30,8 @@ namespace SafetyStockCalc
                 {
                     textBoxDaysCount.Text = newCalc.endDate.Subtract(newCalc.beginDate).Days.ToString();
                     newCalc.daysCount = Convert.ToInt32(textBoxDaysCount.Text);
-
                     textBoxMachineWorkingTime.Text = newCalc.machineWorkingTime.ToString();
-
+                    periodicTxt.Text = newCalc.getQtyPeriodical()
                 }
                 else
                 {

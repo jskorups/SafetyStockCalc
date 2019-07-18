@@ -1,0 +1,4 @@
+zmienic czas pracy maszyny 7 i pol?
+
+https://stackoverflow.com/questions/6412739/binding-combobox-using-dictionary-as-the-datasource
+https://stackoverflow.com/questions/13959644/how-to-get-combobox-datasource-to-a-dictionary
