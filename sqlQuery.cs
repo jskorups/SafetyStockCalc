@@ -9,10 +9,23 @@ using System.Configuration;
 
 namespace SafetyStockCalc
 {
-    class sqlQuery
+    public class sqlQuery
     {
-        DataSet ds = new DataSet();
-        string conString = ConfigurationManager.ConnectionStrings[1].ConnectionString;
-        SqlConnection con = new SqlConnection(conString);
+        public static DataSet GetDataFromSql (string query)
+        {
+            DataSet ds = new DataSet();
+            string conString = ConfigurationManager.ConnectionStrings[1].ConnectionString;
+            SqlConnection con = new SqlConnection(conString);
+
+            using (con)
+            {
+                con.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(query, con);
+                adapter.Fill(ds);
+            }
+            return ds;
+
+        }
+      
     }
 }
