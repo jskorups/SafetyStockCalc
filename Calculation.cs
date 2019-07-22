@@ -24,11 +24,19 @@ namespace SafetyStockCalc
         public int week5 { get; set; }
 
 
+
+
+
         //results
+        public int qtyOfItems { get { return week1 + week2 + week3 + week4 + week5; } }
         public int daysCount { get; set; }
-        public int machineWorkingTime { get { return daysCount * 8 /*zmienic na 7 i pol */; } set { } }
-        public int periodicalResults { get; set; }
-        public int productionPrice { get; set; }
+
+        public int itemsPerDay { get { return qtyOfItems / daysCount; } }
+
+
+        public int machineWorkingTime { get { return (qtyOfItems * cycleTime) / 3600  /*zmienic na 7 i pol */; } }
+        public int periodicalResult { get; set; }
+        public int priceOfItems { get { return qtyOfItems * Convert.ToInt32(priceItem); } }
 
 
         public static readonly Dictionary<string, int> dividingVars = new Dictionary<string, int>()
@@ -37,10 +45,10 @@ namespace SafetyStockCalc
         { "Dwa tygodnie", 14},
         { "Miesiac(20 dni rob.)", 31},
         };
-        
 
 
-        public Calculation(string SAP, string modificationName, DateTime beginDate, DateTime endDate, decimal priceItem, int cycleTime )
+
+        public Calculation(string SAP, string modificationName, DateTime beginDate, DateTime endDate, decimal priceItem, int cycleTime, int week1, int week2, int week3, int week4, int week5)
         {
             this.SAP = SAP;
             this.modificationName = modificationName;
@@ -58,11 +66,12 @@ namespace SafetyStockCalc
 
         public int getQtyPeriodical(int divider)
         {
-            periodicalResults = week1 + week2 + week3 + week4 + week5 / divider;
+            periodicalResults = qtyOfItems / (daysCount / divider);
             return periodicalResults;
         }
 
+
     }
 
-  
+
 }
