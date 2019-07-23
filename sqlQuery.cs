@@ -14,7 +14,7 @@ namespace SafetyStockCalc
         public static DataSet GetDataFromSql (string query)
         {
             DataSet ds = new DataSet();
-            string conString = ConfigurationManager.ConnectionStrings[1].ConnectionString;
+            string conString = ConfigurationManager.ConnectionStrings["SafetyStockCalc.Properties.Settings.ConnectionString"].ConnectionString;
             SqlConnection con = new SqlConnection(conString);
 
             using (con)

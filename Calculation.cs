@@ -29,9 +29,8 @@ namespace SafetyStockCalc
 
         //results
         public int qtyOfItems { get { return week1 + week2 + week3 + week4 + week5; } }
-        public int daysCount { get; set; }
-
-        public int itemsPerDay { get { return qtyOfItems / daysCount; } }
+        public int qtyDays { get; set; }
+        public int qtyPerDay { get { return qtyOfItems / qtyDays; } }
 
 
         public int machineWorkingTime { get { return (qtyOfItems * cycleTime) / 3600  /*zmienic na 7 i pol */; } }
@@ -66,8 +65,8 @@ namespace SafetyStockCalc
 
         public int getQtyPeriodical(int divider)
         {
-            periodicalResults = qtyOfItems / (daysCount / divider);
-            return periodicalResults;
+            periodicalResult = qtyOfItems / (qtyDays / divider);
+            return periodicalResult;
         }
 
 
