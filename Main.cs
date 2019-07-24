@@ -22,22 +22,87 @@ namespace SafetyStockCalc
             listDividers.DataSource = new BindingSource(Calculation.dividingVars, null);
             listDividers.DisplayMember = "Key";
             listDividers.ValueMember = "Value";
-
+            combSapNewMod.SelectedIndex = -1;
+  
         }
         public void sapLoad()
         {
             DataSet dP = sqlQuery.GetDataFromSql("select SAP from Modifications;");
+            DataSet dP2 = sqlQuery.GetDataFromSql("select SAP from Modifications;");
             combSap.DataSource = dP.Tables[0];
-            combSap.ValueMember = "SAP";
-       
-        }
 
-    
+
+            combSapNewMod.DataSource = dP2.Tables[0];
+            combSap.ValueMember = "SAP";
+            combSapNewMod.ValueMember = "SAP";
+
+        }
+        #region validacja z MT
+
+        //public void validationControls()
+        //{
+        //    foreach (Control ctr in tableLayoutPanel5.Controls)
+        //    {
+        //        if (ctr.Tag != null && ctr.Tag.ToString() == "detal")
+        //        {
+
+        //            foreach (Control ctrInPanel in ((TableLayoutPanel)ctr).Controls)
+        //            {
+        //                if (ctrInPanel is NumericUpDown)
+        //                {
+        //                    ((NumericUpDown)ctrInPanel).TextChanged += detailNameTextChanged;
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
+
+        //private void detailNameTextChanged(object sender, EventArgs e)
+        //{
+        //    BtnDetailsAddd.Enabled = BtnDetailsAdd_validation();
+        //    if (BtnDetailsAdd_validation() == false)
+        //    {
+        //        BtnDetailsAddd.BackColor = Color.Red;
+        //    }
+        //    else if (BtnDetailsAdd_validation() == true)
+        //    {
+        //        BtnDetailsAddd.BackColor = Color.Green;
+        //    }
+        //}
+
+        //private bool BtnDetailsAdd_validation()
+        //{
+        //    foreach (Control ctr in tableLayoutPanel5.Controls)
+        //    {
+        //        if (ctr.Tag != null && ctr.Tag.ToString() == "detal")
+        //        {
+        //            int wypelnione = 0;
+        //            foreach (Control ctrInPanel in ((TableLayoutPanel)ctr).Controls)
+        //            {
+        //                if (ctrInPanel is TextBox)
+        //                {
+        //                    if (ctrInPanel.Text.Length > 0) wypelnione++;
+        //                }
+        //            }
+        //            if (wypelnione != 0 && wypelnione != 4)
+        //                return false;
+        //        }
+        //    }
+        //    return true;
+        //}
+
+        #endregion
+
+
+
+
+
+
         private void calcBtn_Click(object sender, EventArgs e)
         {
-          
-                Calculation newCalc = new Calculation(sapTxt.Text, modTxt.Text, Convert.ToDateTime(dateTimePickerOd.Text), Convert.ToDateTime(dateTimePickerDo.Text), Convert.ToDecimal(itemPriceNumeric.Value), Convert.ToInt32(cycleTimeNumeric.Text),
-                Convert.ToInt32(week1Numeric.Value), Convert.ToInt32(week1Numeric.Value), Convert.ToInt32(week1Numeric.Value), Convert.ToInt32(week1Numeric.Value), Convert.ToInt32(week1Numeric.Value));
+
+            Calculation newCalc = new Calculation(sapTxt.Text, modTxt.Text, Convert.ToDateTime(dateTimePickerOd.Text), Convert.ToDateTime(dateTimePickerDo.Text), Convert.ToDecimal(itemPriceNumeric.Value), Convert.ToInt32(cycleTimeNumeric.Text),
+            Convert.ToInt32(week1Numeric.Value), Convert.ToInt32(week1Numeric.Value), Convert.ToInt32(week1Numeric.Value), Convert.ToInt32(week1Numeric.Value), Convert.ToInt32(week1Numeric.Value));
 
             try
             {
@@ -67,10 +132,6 @@ namespace SafetyStockCalc
 
         }
 
-
-
-
-
         #region Load mod when Sap chosen
         private void combSap_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -87,27 +148,35 @@ namespace SafetyStockCalc
             combMod.ValueMember = "modName";
         }
         #endregion
+
+
+
+
         #region sapTxt and modTxt  - block combos
-        private void disableChoice(object sender, EventArgs e)
-        {
-            string str1 = sapTxt.Text;
-            string str2 = modTxt.Text;
 
-            if (str1.Length > 0  ||  str2.Length > 0) {
-
-                combSap.Enabled = false;
-                combMod.Enabled = false;
-            }
-            else 
-            {
-                combSap.Enabled = true;
-                combMod.Enabled = true;
-            }
-        }
+ 
         #endregion
 
+
+
+
+
+
+        void ClearTextboxes(System.Windows.Forms.Control.ControlCollection ctrls)
+        {
+            foreach (Control ctrl in ctrls)
+            {
+                if (ctrl is TextBox)
+
+                    ((TextBox)ctrl).Text = string.Empty;
+
+                ClearTextboxes(ctrl.Controls);
+            }
+        }
         private void save_Click(object sender, EventArgs e)
         {
+
+
             try
             {
 
@@ -121,7 +190,7 @@ namespace SafetyStockCalc
                     "values (@sap, @modName, @week1, @week2, @week3, @week4, @week5, @dateOd, @dateDo, @itemPrice, @cycleTime)";
 
                 // sap % mod name
-                
+
                 cmd.Parameters.AddWithValue("@sap", sapTxt.Text);
                 cmd.Parameters.AddWithValue("@modName", modTxt.Text);
                 // weeks
@@ -143,16 +212,38 @@ namespace SafetyStockCalc
                 sqlConnection1.Open();
                 cmd.ExecuteNonQuery();
                 sqlConnection1.Close();
-                MessageBox.Show("Dodano do bazy danych pod nazwą:  " + modTxt.Text + " dla numeru SAP: "+ sapTxt.Text + "");
+                MessageBox.Show("Dodano do bazy danych pod nazwą:  " + modTxt.Text + " dla numeru SAP: " + sapTxt.Text + "");
 
+                ClearTextboxes(this.Controls);
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message);
             }
-           
-
         }
+
+        private void blokowanie(object sender, EventArgs e)
+        {
+            string str1 = sapTxt.Text;
+            string str2 = modTxt.Text;
+            string str3 = combSapNewMod.Text;
+            
+
+            if (str1.Length > 0 || str2.Length > 0 ||  str3.Length > 0)
+            {
+
+                combSap.Enabled = false;
+                combMod.Enabled = false;
+            }
+            else if (str1.Length == 0 || str2.Length == 0)
+            {
+                combSap.Enabled = true;
+                combMod.Enabled = true;
+            }
+        }
+
+
     }
 }
+
