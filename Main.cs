@@ -92,17 +92,11 @@ namespace SafetyStockCalc
         //}
 
         #endregion
-
-
-
-
-
-
         private void calcBtn_Click(object sender, EventArgs e)
         {
 
-            Calculation newCalc = new Calculation(sapTxt.Text, modTxt.Text, Convert.ToDateTime(dateTimePickerOd.Text), Convert.ToDateTime(dateTimePickerDo.Text), Convert.ToDecimal(itemPriceNumeric.Value), Convert.ToInt32(cycleTimeNumeric.Text),
-            Convert.ToInt32(week1Numeric.Value), Convert.ToInt32(week1Numeric.Value), Convert.ToInt32(week1Numeric.Value), Convert.ToInt32(week1Numeric.Value), Convert.ToInt32(week1Numeric.Value));
+            Calculation newCalc = new Calculation(sapTxt.Text, modTxt.Text, Convert.ToDateTime(dateTimePickerOd.Text), Convert.ToDateTime(dateTimePickerDo.Text), Convert.ToInt32(itemPricetxt.Text), Convert.ToInt32(cycleTimeTxt.Text),
+            Convert.ToInt32(week1Txt.Text), Convert.ToInt32(week2Txt.Text), Convert.ToInt32(week3Txt.Text), Convert.ToInt32(week4Txt.Text), Convert.ToInt32(week5Txt.Text));
 
             try
             {
@@ -148,19 +142,10 @@ namespace SafetyStockCalc
             combMod.ValueMember = "modName";
         }
         #endregion
-
-
-
-
         #region sapTxt and modTxt  - block combos
 
  
         #endregion
-
-
-
-
-
 
         void ClearTextboxes(System.Windows.Forms.Control.ControlCollection ctrls)
         {
@@ -194,17 +179,17 @@ namespace SafetyStockCalc
                 cmd.Parameters.AddWithValue("@sap", sapTxt.Text);
                 cmd.Parameters.AddWithValue("@modName", modTxt.Text);
                 // weeks
-                cmd.Parameters.AddWithValue("@week1", week1Numeric.Value);
-                cmd.Parameters.AddWithValue("@week2", week2Numeric.Value);
-                cmd.Parameters.AddWithValue("@week3", week3Numeric.Value);
-                cmd.Parameters.AddWithValue("@week4", week4Numeric.Value);
-                cmd.Parameters.AddWithValue("@week5", week5Numeric.Value);
+                cmd.Parameters.AddWithValue("@week1", week1Txt.Text);
+                cmd.Parameters.AddWithValue("@week2", week1Txt.Text);
+                cmd.Parameters.AddWithValue("@week3", week1Txt.Text);
+                cmd.Parameters.AddWithValue("@week4", week1Txt.Text);
+                cmd.Parameters.AddWithValue("@week5", week1Txt.Text);
                 // dates
                 cmd.Parameters.AddWithValue("@dateOd", dateTimePickerOd.Value);
                 cmd.Parameters.AddWithValue("@dateDo", dateTimePickerDo.Value);
                 // priceItem && cycleTime
-                cmd.Parameters.AddWithValue("@itemPrice", itemPriceNumeric.Value);
-                cmd.Parameters.AddWithValue("@cycleTime", cycleTimeNumeric.Value);
+                cmd.Parameters.AddWithValue("@itemPrice", itemPricetxt.Text);
+                cmd.Parameters.AddWithValue("@cycleTime", cycleTimeTxt.Text);
                 // qtyItems
 
 
@@ -223,27 +208,73 @@ namespace SafetyStockCalc
             }
         }
 
-        private void blokowanie(object sender, EventArgs e)
+        private void blokowanie()
         {
             string str1 = sapTxt.Text;
             string str2 = modTxt.Text;
             string str3 = combSapNewMod.Text;
             
 
-            if (str1.Length > 0 || str2.Length > 0 ||  str3.Length > 0)
+            if (str1.Length > 0 || str2.Length > 0 )
             {
 
-                combSap.Enabled = false;
-                combMod.Enabled = false;
+                loadDataBtn.Enabled = false;
+                loadDataBtn.BackColor = Color.IndianRed;
+                combSapNewMod.Enabled = false;
             }
             else if (str1.Length == 0 || str2.Length == 0)
             {
-                combSap.Enabled = true;
-                combMod.Enabled = true;
+                loadDataBtn.Enabled = true;
+                combSapNewMod.Enabled = true;
+                loadDataBtn.BackColor = Color.FromArgb(192, 255, 192);
             }
+            else if (str3.Length > 0)
+            {
+                sapTxt.Clear();
+                sapTxt.Enabled = false;
+            }
+            else
+            {
+                loadDataBtn.BackColor = Color.FromArgb(192, 255, 192);
+               
+            }
+
+
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ClearTextboxes(this.Controls);
+        }
 
+        private void blokowanie(object sender, EventArgs e)
+        {
+            blokowanie();
+        }
+
+        private void loadDataBtn_Click(object sender, EventArgs e)
+        {
+            System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "select * from Modifications where modName =  '" + combMod.Text + "'";
+
+            // sap
+            cmd.Parameters.AddWithValue("@mod", combMod.SelectedValue.ToString());
+
+            DataSet dF = sqlQuery.GetDataFromSql(cmd.CommandText);
+
+            combMod.DataSource = dF.Tables[0];
+            combMod.ValueMember = "modName";
+            week1Txt.Text = dF.Tables[0].Rows[0]["week1"].ToString();
+            week2Txt.Text = dF.Tables[0].Rows[0]["week2"].ToString();
+            week3Txt.Text = dF.Tables[0].Rows[0]["week3"].ToString();
+            week4Txt.Text = dF.Tables[0].Rows[0]["week4"].ToString();
+            week5Txt.Text = dF.Tables[0].Rows[0]["week5"].ToString();
+            dateTimePickerOd.Text = dF.Tables[0].Rows[0]["dateBegin"].ToString();
+            dateTimePickerDo.Text = dF.Tables[0].Rows[0]["dateEnd"].ToString();
+            itemPricetxt.Text = dF.Tables[0].Rows[0]["priceItem"].ToString();
+            cycleTimeTxt.Text = dF.Tables[0].Rows[0]["cycleTime"].ToString();
+        }
     }
 }
 
