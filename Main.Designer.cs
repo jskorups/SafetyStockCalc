@@ -1,6 +1,6 @@
 ﻿namespace SafetyStockCalc
 {
-    partial class Main
+    partial class SSC
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SSC));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -67,6 +67,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePickerOd = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
+            this.itemPricetxt = new System.Windows.Forms.TextBox();
+            this.cycleTimeTxt = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanelWeek = new System.Windows.Forms.TableLayoutPanel();
             this.label20 = new System.Windows.Forms.Label();
@@ -76,6 +78,11 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.week1Txt = new System.Windows.Forms.TextBox();
+            this.week2Txt = new System.Windows.Forms.TextBox();
+            this.week3Txt = new System.Windows.Forms.TextBox();
+            this.week4Txt = new System.Windows.Forms.TextBox();
+            this.week5Txt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -90,13 +97,6 @@
             this.modTxt = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.combSapNewMod = new System.Windows.Forms.ComboBox();
-            this.week1Txt = new System.Windows.Forms.TextBox();
-            this.week2Txt = new System.Windows.Forms.TextBox();
-            this.week3Txt = new System.Windows.Forms.TextBox();
-            this.week4Txt = new System.Windows.Forms.TextBox();
-            this.week5Txt = new System.Windows.Forms.TextBox();
-            this.itemPricetxt = new System.Windows.Forms.TextBox();
-            this.cycleTimeTxt = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -478,7 +478,7 @@
             this.tableLayoutPanel13.ColumnCount = 3;
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 319F));
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 384F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 390F));
             this.tableLayoutPanel13.Controls.Add(this.button2, 0, 0);
             this.tableLayoutPanel13.Controls.Add(this.save, 2, 0);
             this.tableLayoutPanel13.Controls.Add(this.count, 1, 0);
@@ -494,7 +494,7 @@
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(65, 6);
+            this.button2.Location = new System.Drawing.Point(62, 6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(210, 39);
             this.button2.TabIndex = 2;
@@ -507,7 +507,7 @@
             this.save.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.save.BackColor = System.Drawing.Color.Lime;
             this.save.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.save.Location = new System.Drawing.Point(750, 6);
+            this.save.Location = new System.Drawing.Point(747, 6);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(210, 39);
             this.save.TabIndex = 1;
@@ -520,7 +520,7 @@
             this.count.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.count.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.count.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.count.Location = new System.Drawing.Point(395, 6);
+            this.count.Location = new System.Drawing.Point(389, 6);
             this.count.Name = "count";
             this.count.Size = new System.Drawing.Size(210, 39);
             this.count.TabIndex = 0;
@@ -551,7 +551,7 @@
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.2437F));
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.7563F));
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 167F));
-            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 384F));
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 392F));
             this.tableLayoutPanel14.Controls.Add(this.dateTimePickerDo, 1, 1);
             this.tableLayoutPanel14.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel14.Controls.Add(this.label4, 2, 1);
@@ -578,9 +578,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePickerDo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.dateTimePickerDo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerDo.Location = new System.Drawing.Point(172, 50);
+            this.dateTimePickerDo.Location = new System.Drawing.Point(169, 50);
             this.dateTimePickerDo.Name = "dateTimePickerDo";
-            this.dateTimePickerDo.Size = new System.Drawing.Size(308, 26);
+            this.dateTimePickerDo.Size = new System.Drawing.Size(303, 26);
             this.dateTimePickerDo.TabIndex = 10;
             // 
             // label2
@@ -597,7 +597,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(489, 47);
+            this.label4.Location = new System.Drawing.Point(481, 47);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 20);
             this.label4.TabIndex = 12;
@@ -619,20 +619,42 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePickerOd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.dateTimePickerOd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerOd.Location = new System.Drawing.Point(172, 6);
+            this.dateTimePickerOd.Location = new System.Drawing.Point(169, 6);
             this.dateTimePickerOd.Name = "dateTimePickerOd";
-            this.dateTimePickerOd.Size = new System.Drawing.Size(308, 26);
+            this.dateTimePickerOd.Size = new System.Drawing.Size(303, 26);
             this.dateTimePickerOd.TabIndex = 2;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label14.Location = new System.Drawing.Point(489, 3);
+            this.label14.Location = new System.Drawing.Point(481, 3);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(146, 20);
             this.label14.TabIndex = 4;
             this.label14.Text = "Koszt wyrobu [PLN]";
+            // 
+            // itemPricetxt
+            // 
+            this.itemPricetxt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.itemPricetxt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.itemPricetxt.Location = new System.Drawing.Point(651, 6);
+            this.itemPricetxt.Name = "itemPricetxt";
+            this.itemPricetxt.Size = new System.Drawing.Size(387, 27);
+            this.itemPricetxt.TabIndex = 13;
+            // 
+            // cycleTimeTxt
+            // 
+            this.cycleTimeTxt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cycleTimeTxt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cycleTimeTxt.Location = new System.Drawing.Point(651, 50);
+            this.cycleTimeTxt.Name = "cycleTimeTxt";
+            this.cycleTimeTxt.Size = new System.Drawing.Size(387, 27);
+            this.cycleTimeTxt.TabIndex = 14;
             // 
             // tableLayoutPanel15
             // 
@@ -762,6 +784,61 @@
             this.label21.Size = new System.Drawing.Size(38, 16);
             this.label21.TabIndex = 12;
             this.label21.Text = "Week";
+            // 
+            // week1Txt
+            // 
+            this.week1Txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.week1Txt.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.week1Txt.Location = new System.Drawing.Point(99, 41);
+            this.week1Txt.Name = "week1Txt";
+            this.week1Txt.Size = new System.Drawing.Size(156, 23);
+            this.week1Txt.TabIndex = 13;
+            // 
+            // week2Txt
+            // 
+            this.week2Txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.week2Txt.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.week2Txt.Location = new System.Drawing.Point(264, 41);
+            this.week2Txt.Name = "week2Txt";
+            this.week2Txt.Size = new System.Drawing.Size(156, 23);
+            this.week2Txt.TabIndex = 14;
+            // 
+            // week3Txt
+            // 
+            this.week3Txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.week3Txt.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.week3Txt.Location = new System.Drawing.Point(429, 41);
+            this.week3Txt.Name = "week3Txt";
+            this.week3Txt.Size = new System.Drawing.Size(156, 23);
+            this.week3Txt.TabIndex = 15;
+            // 
+            // week4Txt
+            // 
+            this.week4Txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.week4Txt.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.week4Txt.Location = new System.Drawing.Point(594, 41);
+            this.week4Txt.Name = "week4Txt";
+            this.week4Txt.Size = new System.Drawing.Size(156, 23);
+            this.week4Txt.TabIndex = 16;
+            // 
+            // week5Txt
+            // 
+            this.week5Txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.week5Txt.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.week5Txt.Location = new System.Drawing.Point(759, 41);
+            this.week5Txt.Name = "week5Txt";
+            this.week5Txt.Size = new System.Drawing.Size(156, 23);
+            this.week5Txt.TabIndex = 17;
             // 
             // label1
             // 
@@ -950,85 +1027,9 @@
             this.combSapNewMod.SelectedIndexChanged += new System.EventHandler(this.blokowanie);
             this.combSapNewMod.TextChanged += new System.EventHandler(this.blokowanie);
             // 
-            // week1Txt
+            // SSC
             // 
-            this.week1Txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.week1Txt.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.week1Txt.Location = new System.Drawing.Point(99, 41);
-            this.week1Txt.Name = "week1Txt";
-            this.week1Txt.Size = new System.Drawing.Size(156, 23);
-            this.week1Txt.TabIndex = 13;
-            // 
-            // week2Txt
-            // 
-            this.week2Txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.week2Txt.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.week2Txt.Location = new System.Drawing.Point(264, 41);
-            this.week2Txt.Name = "week2Txt";
-            this.week2Txt.Size = new System.Drawing.Size(156, 23);
-            this.week2Txt.TabIndex = 14;
-            // 
-            // week3Txt
-            // 
-            this.week3Txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.week3Txt.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.week3Txt.Location = new System.Drawing.Point(429, 41);
-            this.week3Txt.Name = "week3Txt";
-            this.week3Txt.Size = new System.Drawing.Size(156, 23);
-            this.week3Txt.TabIndex = 15;
-            // 
-            // week4Txt
-            // 
-            this.week4Txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.week4Txt.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.week4Txt.Location = new System.Drawing.Point(594, 41);
-            this.week4Txt.Name = "week4Txt";
-            this.week4Txt.Size = new System.Drawing.Size(156, 23);
-            this.week4Txt.TabIndex = 16;
-            // 
-            // week5Txt
-            // 
-            this.week5Txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.week5Txt.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.week5Txt.Location = new System.Drawing.Point(759, 41);
-            this.week5Txt.Name = "week5Txt";
-            this.week5Txt.Size = new System.Drawing.Size(156, 23);
-            this.week5Txt.TabIndex = 17;
-            // 
-            // itemPricetxt
-            // 
-            this.itemPricetxt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.itemPricetxt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.itemPricetxt.Location = new System.Drawing.Point(659, 6);
-            this.itemPricetxt.Name = "itemPricetxt";
-            this.itemPricetxt.Size = new System.Drawing.Size(379, 27);
-            this.itemPricetxt.TabIndex = 13;
-            // 
-            // cycleTimeTxt
-            // 
-            this.cycleTimeTxt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cycleTimeTxt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cycleTimeTxt.Location = new System.Drawing.Point(659, 50);
-            this.cycleTimeTxt.Name = "cycleTimeTxt";
-            this.cycleTimeTxt.Size = new System.Drawing.Size(379, 27);
-            this.cycleTimeTxt.TabIndex = 14;
-            // 
-            // Main
-            // 
+            this.AccessibleName = "Safety Stock Calculator";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1062, 831);
@@ -1036,7 +1037,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1078, 870);
-            this.Name = "Main";
+            this.Name = "SSC";
+            this.Text = "Safety Stock Calculator";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);

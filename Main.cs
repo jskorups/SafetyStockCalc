@@ -12,9 +12,9 @@ using System.Configuration;
 
 namespace SafetyStockCalc
 {
-    public partial class Main : Form
+    public partial class SSC : Form
     {
-        public Main()
+        public SSC()
         {
             InitializeComponent();
             sapLoad();

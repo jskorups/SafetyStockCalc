@@ -29,7 +29,13 @@ namespace SafetyStockCalc
 
         //results
         public int qtyOfItems { get { return week1 + week2 + week3 + week4 + week5; } }
-        public int qtyDays { get; set; }
+        public int qtyDays { 
+                            get{
+                                //int days = (beginDate-endDate).TotalDays();  
+                                return ((beginDate-endDate).TotalDays())+1;
+                            }}
+
+
         public int qtyPerDay { get { return qtyOfItems / qtyDays; } }
 
 
