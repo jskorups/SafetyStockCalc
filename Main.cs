@@ -37,6 +37,8 @@ namespace SafetyStockCalc
             combSapNewMod.ValueMember = "SAP";
 
         }
+
+
         #region validacja z MT
 
         //public void validationControls()
@@ -105,10 +107,9 @@ namespace SafetyStockCalc
 
                     newCalc.SAP = sapTxt.Text;
                     qtyItems.Text = newCalc.qtyOfItems.ToString();
-                    newCalc.qtyDays = newCalc.endDate.Subtract(newCalc.beginDate).Days;
                     textBoxDaysCount.Text = newCalc.qtyDays.ToString();
                     itemsPerDay.Text = newCalc.qtyPerDay.ToString();
-                    newCalc.qtyDays = Convert.ToInt32(textBoxDaysCount.Text);
+                    textBoxDaysCount.Text = newCalc.qtyDays.ToString();
                     textBoxMachineWorkingTime.Text = newCalc.machineWorkingTime.ToString();
                     periodicTxt.Text = newCalc.getQtyPeriodical(Convert.ToInt32(listDividers.SelectedValue)).ToString();
                     itemsPrice.Text = newCalc.priceOfItems.ToString();
@@ -215,18 +216,22 @@ namespace SafetyStockCalc
             string str3 = combSapNewMod.Text;
             
 
-            if (str1.Length > 0 || str2.Length > 0 )
+            if (str1.Length > 0 && str2.Length > 0 && !string.IsNullOrEmpty(itemPricetxt.Text) && !string.IsNullOrEmpty(cycleTimeTxt.Text) && (!string.IsNullOrEmpty(week1Txt.Text) && !string.IsNullOrEmpty(week2Txt.Text) && !string.IsNullOrEmpty(week3Txt.Text) && !string.IsNullOrEmpty(week4Txt.Text) && !string.IsNullOrEmpty(week5Txt.Text)))
             {
 
                 loadDataBtn.Enabled = false;
                 loadDataBtn.BackColor = Color.IndianRed;
                 combSapNewMod.Enabled = false;
+                saveBtn.Enabled = true;
+                saveBtn.BackColor = Color.FromArgb(192, 255, 192);
             }
             else if (str1.Length == 0 || str2.Length == 0)
             {
                 loadDataBtn.Enabled = true;
                 combSapNewMod.Enabled = true;
                 loadDataBtn.BackColor = Color.FromArgb(192, 255, 192);
+                saveBtn.Enabled= false;
+                saveBtn.BackColor = Color.IndianRed;
             }
             else if (str3.Length > 0)
             {

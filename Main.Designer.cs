@@ -57,7 +57,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.button2 = new System.Windows.Forms.Button();
-            this.save = new System.Windows.Forms.Button();
+            this.saveBtn = new System.Windows.Forms.Button();
             this.count = new System.Windows.Forms.Button();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
@@ -478,9 +478,9 @@
             this.tableLayoutPanel13.ColumnCount = 3;
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 319F));
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 390F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 393F));
             this.tableLayoutPanel13.Controls.Add(this.button2, 0, 0);
-            this.tableLayoutPanel13.Controls.Add(this.save, 2, 0);
+            this.tableLayoutPanel13.Controls.Add(this.saveBtn, 2, 0);
             this.tableLayoutPanel13.Controls.Add(this.count, 1, 0);
             this.tableLayoutPanel13.Location = new System.Drawing.Point(3, 771);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
@@ -494,7 +494,7 @@
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(62, 6);
+            this.button2.Location = new System.Drawing.Point(61, 6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(210, 39);
             this.button2.TabIndex = 2;
@@ -502,25 +502,25 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // save
+            // saveBtn
             // 
-            this.save.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.save.BackColor = System.Drawing.Color.Lime;
-            this.save.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.save.Location = new System.Drawing.Point(747, 6);
-            this.save.Name = "save";
-            this.save.Size = new System.Drawing.Size(210, 39);
-            this.save.TabIndex = 1;
-            this.save.Text = "Zapisz";
-            this.save.UseVisualStyleBackColor = false;
-            this.save.Click += new System.EventHandler(this.save_Click);
+            this.saveBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.saveBtn.BackColor = System.Drawing.Color.Lime;
+            this.saveBtn.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.saveBtn.Location = new System.Drawing.Point(745, 6);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(210, 39);
+            this.saveBtn.TabIndex = 1;
+            this.saveBtn.Text = "Zapisz";
+            this.saveBtn.UseVisualStyleBackColor = false;
+            this.saveBtn.Click += new System.EventHandler(this.save_Click);
             // 
             // count
             // 
             this.count.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.count.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.count.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.count.Location = new System.Drawing.Point(389, 6);
+            this.count.Location = new System.Drawing.Point(386, 6);
             this.count.Name = "count";
             this.count.Size = new System.Drawing.Size(210, 39);
             this.count.TabIndex = 0;
@@ -551,7 +551,7 @@
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.2437F));
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.7563F));
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 167F));
-            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 392F));
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 396F));
             this.tableLayoutPanel14.Controls.Add(this.dateTimePickerDo, 1, 1);
             this.tableLayoutPanel14.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel14.Controls.Add(this.label4, 2, 1);
@@ -578,9 +578,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePickerDo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.dateTimePickerDo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerDo.Location = new System.Drawing.Point(169, 50);
+            this.dateTimePickerDo.Location = new System.Drawing.Point(168, 50);
             this.dateTimePickerDo.Name = "dateTimePickerDo";
-            this.dateTimePickerDo.Size = new System.Drawing.Size(303, 26);
+            this.dateTimePickerDo.Size = new System.Drawing.Size(300, 26);
             this.dateTimePickerDo.TabIndex = 10;
             // 
             // label2
@@ -597,7 +597,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(481, 47);
+            this.label4.Location = new System.Drawing.Point(477, 47);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 20);
             this.label4.TabIndex = 12;
@@ -619,16 +619,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePickerOd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.dateTimePickerOd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerOd.Location = new System.Drawing.Point(169, 6);
+            this.dateTimePickerOd.Location = new System.Drawing.Point(168, 6);
             this.dateTimePickerOd.Name = "dateTimePickerOd";
-            this.dateTimePickerOd.Size = new System.Drawing.Size(303, 26);
+            this.dateTimePickerOd.Size = new System.Drawing.Size(300, 26);
             this.dateTimePickerOd.TabIndex = 2;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label14.Location = new System.Drawing.Point(481, 3);
+            this.label14.Location = new System.Drawing.Point(477, 3);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(146, 20);
             this.label14.TabIndex = 4;
@@ -640,10 +640,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.itemPricetxt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.itemPricetxt.Location = new System.Drawing.Point(651, 6);
+            this.itemPricetxt.Location = new System.Drawing.Point(647, 6);
             this.itemPricetxt.Name = "itemPricetxt";
-            this.itemPricetxt.Size = new System.Drawing.Size(387, 27);
+            this.itemPricetxt.Size = new System.Drawing.Size(391, 27);
             this.itemPricetxt.TabIndex = 13;
+            this.itemPricetxt.TextChanged += new System.EventHandler(this.blokowanie);
             // 
             // cycleTimeTxt
             // 
@@ -651,10 +652,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cycleTimeTxt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cycleTimeTxt.Location = new System.Drawing.Point(651, 50);
+            this.cycleTimeTxt.Location = new System.Drawing.Point(647, 50);
             this.cycleTimeTxt.Name = "cycleTimeTxt";
-            this.cycleTimeTxt.Size = new System.Drawing.Size(387, 27);
+            this.cycleTimeTxt.Size = new System.Drawing.Size(391, 27);
             this.cycleTimeTxt.TabIndex = 14;
+            this.cycleTimeTxt.TextChanged += new System.EventHandler(this.blokowanie);
             // 
             // tableLayoutPanel15
             // 
@@ -795,6 +797,7 @@
             this.week1Txt.Name = "week1Txt";
             this.week1Txt.Size = new System.Drawing.Size(156, 23);
             this.week1Txt.TabIndex = 13;
+            this.week1Txt.TextChanged += new System.EventHandler(this.blokowanie);
             // 
             // week2Txt
             // 
@@ -806,6 +809,7 @@
             this.week2Txt.Name = "week2Txt";
             this.week2Txt.Size = new System.Drawing.Size(156, 23);
             this.week2Txt.TabIndex = 14;
+            this.week2Txt.TextChanged += new System.EventHandler(this.blokowanie);
             // 
             // week3Txt
             // 
@@ -817,6 +821,7 @@
             this.week3Txt.Name = "week3Txt";
             this.week3Txt.Size = new System.Drawing.Size(156, 23);
             this.week3Txt.TabIndex = 15;
+            this.week3Txt.TextChanged += new System.EventHandler(this.blokowanie);
             // 
             // week4Txt
             // 
@@ -828,6 +833,7 @@
             this.week4Txt.Name = "week4Txt";
             this.week4Txt.Size = new System.Drawing.Size(156, 23);
             this.week4Txt.TabIndex = 16;
+            this.week4Txt.TextChanged += new System.EventHandler(this.blokowanie);
             // 
             // week5Txt
             // 
@@ -839,6 +845,7 @@
             this.week5Txt.Name = "week5Txt";
             this.week5Txt.Size = new System.Drawing.Size(156, 23);
             this.week5Txt.TabIndex = 17;
+            this.week5Txt.TextChanged += new System.EventHandler(this.blokowanie);
             // 
             // label1
             // 
@@ -1098,7 +1105,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
         private System.Windows.Forms.Button count;
-        private System.Windows.Forms.Button save;
+        private System.Windows.Forms.Button saveBtn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label label13;

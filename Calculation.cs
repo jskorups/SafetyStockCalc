@@ -32,7 +32,7 @@ namespace SafetyStockCalc
         public int qtyDays { 
                             get{
                                 //int days = (beginDate-endDate).TotalDays();  
-                                return ((beginDate-endDate).TotalDays())+1;
+                                return Convert.ToInt32((endDate-beginDate).TotalDays+1);
                             }}
 
 
@@ -40,7 +40,7 @@ namespace SafetyStockCalc
 
 
         public int machineWorkingTime { get { return (qtyOfItems * cycleTime) / 3600  /*zmienic na 7 i pol */; } }
-        public int periodicalResult { get; set; }
+        public float periodicalResult { get; set; }
         public int priceOfItems { get { return qtyOfItems * Convert.ToInt32(priceItem); } }
 
 
@@ -71,8 +71,8 @@ namespace SafetyStockCalc
 
         public int getQtyPeriodical(int divider)
         {
-            periodicalResult = qtyOfItems / (qtyDays / divider);
-            return periodicalResult;
+            periodicalResult = (float)qtyOfItems / (qtyDays / divider);
+            return periodicalResult.ToString() ;
         }
 
 
