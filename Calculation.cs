@@ -28,23 +28,23 @@ namespace SafetyStockCalc
 
 
         //results
-        public int qtyOfItems { get { return week1 + week2 + week3 + week4 + week5; } }
-        public int qtyDays { 
+        public decimal qtyOfItems { get { return week1 + week2 + week3 + week4 + week5; } }
+        public decimal qtyDays { 
                             get{
                                 //int days = (beginDate-endDate).TotalDays();  
                                 return Convert.ToInt32((endDate-beginDate).TotalDays+1);
                             }}
 
 
-        public int qtyPerDay { get { return qtyOfItems / qtyDays; } }
+        public decimal qtyPerDay { get { return Math.Round ((qtyOfItems / qtyDays),2); } }
 
 
-        public int machineWorkingTime { get { return (qtyOfItems * cycleTime) / 3600  /*zmienic na 7 i pol */; } }
-        public float periodicalResult { get; set; }
-        public int priceOfItems { get { return qtyOfItems * Convert.ToInt32(priceItem); } }
+        public decimal machineWorkingTime { get { return Math.Round(((qtyOfItems * cycleTime) / 3600),2)  /*zmienic na 7 i pol */; } }
+        public decimal periodicalResult { get; set; }
+        public decimal priceOfItems { get { return qtyOfItems * Convert.ToInt32(priceItem); } }
 
 
-        public static readonly Dictionary<string, int> dividingVars = new Dictionary<string, int>()
+        public static readonly Dictionary<string, decimal> dividingVars = new Dictionary<string, decimal>()
         {
         { "Tydzien", 7},
         { "Dwa tygodnie", 14},
@@ -66,13 +66,14 @@ namespace SafetyStockCalc
             this.week3 = week3;
             this.week4 = week4;
             this.week5 = week5;
+            
         }
 
 
-        public int getQtyPeriodical(int divider)
+        public decimal getQtyPeriodical(int divider)
         {
-            periodicalResult = (float)qtyOfItems / (qtyDays / divider);
-            return periodicalResult.ToString() ;
+            periodicalResult = Math.Round((qtyOfItems / (divider/7)),2);
+            return periodicalResult ;
         }
 
 

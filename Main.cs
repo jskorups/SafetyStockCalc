@@ -193,7 +193,7 @@ namespace SafetyStockCalc
                 cmd.Parameters.AddWithValue("@cycleTime", cycleTimeTxt.Text);
                 // qtyItems
 
-
+               
                 cmd.Connection = sqlConnection1;
                 sqlConnection1.Open();
                 cmd.ExecuteNonQuery();
@@ -201,11 +201,13 @@ namespace SafetyStockCalc
                 MessageBox.Show("Dodano do bazy danych pod nazwą:  " + modTxt.Text + " dla numeru SAP: " + sapTxt.Text + "");
 
                 ClearTextboxes(this.Controls);
+                combSap.Refresh();
+                combMod.Refresh();
             }
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Coś poszło nie tak "+System.Environment.NewLine + "Sprawdz dane lub skontaktuj się z administratorem");
             }
         }
 
@@ -259,10 +261,12 @@ namespace SafetyStockCalc
 
         private void loadDataBtn_Click(object sender, EventArgs e)
         {
+            sapTxt.Clear();
+            modTxt.Clear();
+
             System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
             cmd.CommandType = System.Data.CommandType.Text;
             cmd.CommandText = "select * from Modifications where modName =  '" + combMod.Text + "'";
-
             // sap
             cmd.Parameters.AddWithValue("@mod", combMod.SelectedValue.ToString());
 
