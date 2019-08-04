@@ -9,6 +9,7 @@ namespace SafetyStockCalc
     class Calculation
     {
         //inputs
+        public string Project { get; set; }
         public string SAP { get; set; }
         public string modificationName { get; set; }
         public DateTime beginDate { get; set; }

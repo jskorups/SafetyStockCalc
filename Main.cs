@@ -18,13 +18,25 @@ namespace SafetyStockCalc
         {
             InitializeComponent();
             sapLoad();
+            projectLoad();
+            combProj.SelectedIndex = -1;
 
             listDividers.DataSource = new BindingSource(Calculation.dividingVars, null);
             listDividers.DisplayMember = "Key";
             listDividers.ValueMember = "Value";
-            combSapNewMod.SelectedIndex = -1;
+            //combSapNewMod.SelectedIndex = -1;
+            
   
         }
+        public void projectLoad()
+        {
+            DataSet dP = sqlQuery.GetDataFromSql("select  * from Project;");
+            combProj.DataSource = dP.Tables[0];
+            combProj.ValueMember = "id";
+            combProj.DisplayMember = "ProjectName";
+
+        }
+
         public void sapLoad()
         {
             DataSet dP = sqlQuery.GetDataFromSql("select SAP from Modifications;");
@@ -32,9 +44,9 @@ namespace SafetyStockCalc
             combSap.DataSource = dP.Tables[0];
 
 
-            combSapNewMod.DataSource = dP2.Tables[0];
+            //combSapNewMod.DataSource = dP2.Tables[0];
             combSap.ValueMember = "SAP";
-            combSapNewMod.ValueMember = "SAP";
+            //combSapNewMod.ValueMember = "SAP";
 
         }
 
@@ -97,7 +109,7 @@ namespace SafetyStockCalc
         private void calcBtn_Click(object sender, EventArgs e)
         {
 
-            Calculation newCalc = new Calculation(sapTxt.Text, modTxt.Text, Convert.ToDateTime(dateTimePickerOd.Text), Convert.ToDateTime(dateTimePickerDo.Text), Convert.ToInt32(itemPricetxt.Text), Convert.ToInt32(cycleTimeTxt.Text),
+            Calculation newCalc = new Calculation(combSap.Text, combMod.Text, Convert.ToDateTime(dateTimePickerOd.Text), Convert.ToDateTime(dateTimePickerDo.Text), Convert.ToInt32(itemPricetxt.Text), Convert.ToInt32(cycleTimeTxt.Text),
             Convert.ToInt32(week1Txt.Text), Convert.ToInt32(week2Txt.Text), Convert.ToInt32(week3Txt.Text), Convert.ToInt32(week4Txt.Text), Convert.ToInt32(week5Txt.Text));
 
             try
@@ -105,7 +117,7 @@ namespace SafetyStockCalc
                 if (newCalc.endDate >= newCalc.beginDate)
                 {
 
-                    newCalc.SAP = sapTxt.Text;
+                    newCalc.SAP = combSap.Text;
                     qtyItems.Text = newCalc.qtyOfItems.ToString();
                     textBoxDaysCount.Text = newCalc.qtyDays.ToString();
                     itemsPerDay.Text = newCalc.qtyPerDay.ToString();
@@ -177,8 +189,7 @@ namespace SafetyStockCalc
 
                 // sap % mod name
 
-                cmd.Parameters.AddWithValue("@sap", sapTxt.Text);
-                cmd.Parameters.AddWithValue("@modName", modTxt.Text);
+
                 // weeks
                 cmd.Parameters.AddWithValue("@week1", week1Txt.Text);
                 cmd.Parameters.AddWithValue("@week2", week1Txt.Text);
@@ -198,7 +209,7 @@ namespace SafetyStockCalc
                 sqlConnection1.Open();
                 cmd.ExecuteNonQuery();
                 sqlConnection1.Close();
-                MessageBox.Show("Dodano do bazy danych pod nazwą:  " + modTxt.Text + " dla numeru SAP: " + sapTxt.Text + "");
+                MessageBox.Show("Dodano do bazy danych pod nazwą:  " + combMod.Text + " dla numeru SAP: " + combSap.Text + "");
 
                 ClearTextboxes(this.Controls);
                 combSap.Refresh();
@@ -213,40 +224,8 @@ namespace SafetyStockCalc
 
         private void blokowanie()
         {
-            string str1 = sapTxt.Text;
-            string str2 = modTxt.Text;
-            string str3 = combSapNewMod.Text;
+       
             
-
-            if (str1.Length > 0 && str2.Length > 0 && !string.IsNullOrEmpty(itemPricetxt.Text) && !string.IsNullOrEmpty(cycleTimeTxt.Text) && (!string.IsNullOrEmpty(week1Txt.Text) && !string.IsNullOrEmpty(week2Txt.Text) && !string.IsNullOrEmpty(week3Txt.Text) && !string.IsNullOrEmpty(week4Txt.Text) && !string.IsNullOrEmpty(week5Txt.Text)))
-            {
-
-                loadDataBtn.Enabled = false;
-                loadDataBtn.BackColor = Color.IndianRed;
-                combSapNewMod.Enabled = false;
-                saveBtn.Enabled = true;
-                saveBtn.BackColor = Color.FromArgb(192, 255, 192);
-            }
-            else if (str1.Length == 0 || str2.Length == 0)
-            {
-                loadDataBtn.Enabled = true;
-                combSapNewMod.Enabled = true;
-                loadDataBtn.BackColor = Color.FromArgb(192, 255, 192);
-                saveBtn.Enabled= false;
-                saveBtn.BackColor = Color.IndianRed;
-            }
-            else if (str3.Length > 0)
-            {
-                sapTxt.Clear();
-                sapTxt.Enabled = false;
-            }
-            else
-            {
-                loadDataBtn.BackColor = Color.FromArgb(192, 255, 192);
-               
-            }
-
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -261,8 +240,7 @@ namespace SafetyStockCalc
 
         private void loadDataBtn_Click(object sender, EventArgs e)
         {
-            sapTxt.Clear();
-            modTxt.Clear();
+           
 
             System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
             cmd.CommandType = System.Data.CommandType.Text;
@@ -283,6 +261,25 @@ namespace SafetyStockCalc
             dateTimePickerDo.Text = dF.Tables[0].Rows[0]["dateEnd"].ToString();
             itemPricetxt.Text = dF.Tables[0].Rows[0]["priceItem"].ToString();
             cycleTimeTxt.Text = dF.Tables[0].Rows[0]["cycleTime"].ToString();
+        }
+
+        private void addProjBtn_Click(object sender, EventArgs e)
+        {
+             AddProject addPro= new AddProject();
+            addPro.Show();
+            
+        }
+
+        private void addSapBtn_Click(object sender, EventArgs e)
+        {
+            AddSAP addSAP = new AddSAP();
+            addSAP.Show();
+        }
+
+        private void addModBtn_Click(object sender, EventArgs e)
+        {
+            AddModification adMod = new AddModification();
+            adMod.Show();
         }
     }
 }
