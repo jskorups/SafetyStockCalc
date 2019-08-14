@@ -17,7 +17,7 @@ namespace SafetyStockCalc
         public SSC()
         {
             InitializeComponent();
-            sapLoad();
+           
             projectLoad();
             combProj.SelectedIndex = -1;
 
@@ -37,15 +37,42 @@ namespace SafetyStockCalc
 
         }
 
-        public void sapLoad()
+        private void combProj_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataSet dP = sqlQuery.GetDataFromSql("select SAP from Modifications;");
-            DataSet dP2 = sqlQuery.GetDataFromSql("select SAP from Modifications;");
-            combSap.DataSource = dP.Tables[0];
+            if (combProj.SelectedIndex > -1)
+            {
+                sapLoad();
+                modLoad();
+            }
+            return;
+           
+        }
 
+
+        private void combSap_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            modLoad();
+        }
+
+        public void modLoad()
+        {
+            DataSet dP = sqlQuery.GetDataFromSql("select * from Modifications where SAP = (select id from SAP where SAP = '" + combSap.Text + "')");
+            combMod.DataSource = dP.Tables[0];
 
             //combSapNewMod.DataSource = dP2.Tables[0];
-            combSap.ValueMember = "SAP";
+            combMod.ValueMember = "id";
+            combMod.DisplayMember = "modName";
+            //combSapNewMod.ValueMember = "SAP";
+        }
+
+        public void sapLoad()
+        {
+            DataSet dP = sqlQuery.GetDataFromSql("select * from SAP where idProject = (select id from Project where ProjectName = '" + combProj.Text + "')");
+            combSap.DataSource = dP.Tables[0];
+
+            //combSapNewMod.DataSource = dP2.Tables[0];
+            combSap.ValueMember = "id";
+            combSap.DisplayMember = "SAP";
             //combSapNewMod.ValueMember = "SAP";
 
         }
@@ -265,8 +292,13 @@ namespace SafetyStockCalc
 
         private void addProjBtn_Click(object sender, EventArgs e)
         {
-             AddProject addPro= new AddProject();
-            addPro.Show();
+
+            using(var newdiv = new AddProject())
+        newdiv.ShowDialog();
+
+            projectLoad();
+
+
             
         }
 
@@ -281,6 +313,8 @@ namespace SafetyStockCalc
             AddModification adMod = new AddModification();
             adMod.Show();
         }
+
+     
     }
 }
 
