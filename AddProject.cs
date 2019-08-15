@@ -29,7 +29,7 @@ namespace SafetyStockCalc
                 System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.CommandText = "insert into Project (ProjectName)" +
+                cmd.CommandText = "insert into Project (Project)" +
                     "values (@ProjectName)";
                 cmd.Parameters.AddWithValue("@ProjectName", addProjTxt.Text);
 

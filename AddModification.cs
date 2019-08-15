@@ -16,8 +16,8 @@ namespace SafetyStockCalc
         public AddModification()
         {
             InitializeComponent();
-            ProjektComb.SelectedIndex = -1;
             projectLoad();
+            sapLoad();
             AddModBtn.Enabled = false;
             DelModBtn.Enabled = false;
         }
@@ -31,10 +31,11 @@ namespace SafetyStockCalc
                 System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
                 cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.CommandText = "insert into Modifications (modName, SAP)" +
-                    "values (@modName, @SAP)";
+                cmd.CommandText = "insert into Modifications (modName, SAPid, ProjectId)" +
+                    "values (@modName, @SAP, @projectId)";
                 cmd.Parameters.AddWithValue("@modName", modTxt.Text );
                 cmd.Parameters.AddWithValue("@SAP", SAPcomb.SelectedValue);
+                cmd.Parameters.AddWithValue("@projectId", ProjektComb.SelectedValue);
 
                 cmd.Connection = sqlConnection1;
                 sqlConnection1.Open();
@@ -43,10 +44,10 @@ namespace SafetyStockCalc
                 MessageBox.Show("Dodano do bazy danych pod nazwą");
                 this.Close();
             }
-            catch (Exception)
+            catch (Exception ee)
             {
 
-                throw;
+                MessageBox.Show(ee.Message + "Nie można dodać do bazy danych");
             }
         }
 
@@ -56,13 +57,23 @@ namespace SafetyStockCalc
             DataSet dP = sqlQuery.GetDataFromSql("select  * from Project;");
             ProjektComb.DataSource = dP.Tables[0];
             ProjektComb.ValueMember = "id";
-            ProjektComb.DisplayMember = "ProjectName";
+            ProjektComb.DisplayMember = "Project";
 
+        }
+
+        public void sapLoad()
+        {
+
+            DataSet dP = sqlQuery.GetDataFromSql("select  * from SAP where idProject = '" + ProjektComb.SelectedValue + "'");
+            SAPcomb.DataSource = dP.Tables[0];
+            SAPcomb.ValueMember = "id";
+            SAPcomb.DisplayMember = "SAP";
+     
         }
 
         private void ProjektComb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataSet dP = sqlQuery.GetDataFromSql("select * from SAP where idProject = (select id from Project where ProjectName = '" + ProjektComb.Text + "')");
+            DataSet dP = sqlQuery.GetDataFromSql("select * from SAP where idProject = (select id from Project where Project = '" + ProjektComb.Text + "')");
             SAPcomb.DataSource = dP.Tables[0];
 
             //combSapNewMod.DataSource = dP2.Tables[0];

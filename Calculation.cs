@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SafetyStockCalc
 {
-    class Calculation
+    public class Calculation
     {
         //inputs
         public string Project { get; set; }
@@ -42,7 +42,7 @@ namespace SafetyStockCalc
 
         public decimal machineWorkingTime { get { return Math.Round(((qtyOfItems * cycleTime) / 3600),2)  /*zmienic na 7 i pol */; } }
         public decimal periodicalResult { get; set; }
-        public decimal priceOfItems { get { return qtyOfItems * Convert.ToInt32(priceItem); } }
+        public decimal priceOfItems { get { return Decimal.Multiply((qtyOfItems * priceItem), Convert.ToDecimal(1.5)); } }
 
 
         public static readonly Dictionary<string, decimal> dividingVars = new Dictionary<string, decimal>()

@@ -1,27 +1,11 @@
-zmienic czas pracy maszyny 7 i pol?
+ï»¿zmienic czas pracy maszyny 7 i pol?
 
 https://stackoverflow.com/questions/6412739/binding-combobox-using-dictionary-as-the-datasource
 https://stackoverflow.com/questions/13959644/how-to-get-combobox-datasource-to-a-dictionary
 
 
-1. Wybierz projekt - > wybierz modyfikacje - > wybierz sap
-
 - usuwanie z kazdego
-
-2. Dodatkowe:
-
-- Uwzglêdnianie przecinków
-- Odœwie¿anie apki
-- Usuwanie pozycji SAP
-- Koszt wyrobów w EURO
-
-
-3. najwaznijesze:
-
-
-Jedna rzecz jeszcze.
-Krzysiek dostaje najczêœciej dwie dane: czas produkowania stocku przy maksymalnym wykorzystaniu maszyny i iloœæ sztuk.
-Da³oby radê dodaæ coœ takiego?
-Iloœæ sztuk, któr¹ maszyna jest w stanie wyprodukowaæ w czasie 24h?
-Bo jak on robi stock to maszyna chodzi prawie ca³y czas i jak my mu podajemy, ¿e np. potrzebujemy tyle i tyle to on robi non stop to, a jak jest za du¿o to wrzuca w weekend. 
-Nie wiem czy dobrze to wyjaœni³em, mo¿emy to obgadaæ.
++ zapisz i wczyta oprogramowac
++ 1.5 x koszty produkcji
++ oÅ› czasu
+- walidacja dla wczytywania i zapisu
