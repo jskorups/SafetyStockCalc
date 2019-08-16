@@ -8,4 +8,5 @@ https://stackoverflow.com/questions/13959644/how-to-get-combobox-datasource-to-a
 + zapisz i wczyta oprogramowac
 + 1.5 x koszty produkcji
 + oś czasu
+
 - walidacja dla wczytywania i zapisu

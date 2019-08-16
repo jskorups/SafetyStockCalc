@@ -68,6 +68,18 @@
       <DependentUpon>AddSAP.cs</DependentUpon>
     </Compile>
     <Compile Include="Calculation.cs" />
+    <Compile Include="EditProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditProject.Designer.cs">
+      <DependentUpon>EditProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditSAP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditSAP.Designer.cs">
+      <DependentUpon>EditSAP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +98,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddSAP.resx">
       <DependentUpon>AddSAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditProject.resx">
+      <DependentUpon>EditProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditSAP.resx">
+      <DependentUpon>EditSAP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
