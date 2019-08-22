@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SSC));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -101,8 +101,10 @@
             this.addModBtn = new System.Windows.Forms.Button();
             this.editProjektBtn = new System.Windows.Forms.Button();
             this.editSapBtn = new System.Windows.Forms.Button();
-            this.editModBtn = new System.Windows.Forms.Button();
             this.addSapBtn = new System.Windows.Forms.Button();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.editModBtn = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -119,6 +121,7 @@
             this.tableLayoutPanelWeek.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanelData.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -435,26 +438,26 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dzien,
             this.sztuki});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.Location = new System.Drawing.Point(499, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(533, 291);
@@ -462,8 +465,8 @@
             // 
             // dzien
             // 
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dzien.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dzien.DefaultCellStyle = dataGridViewCellStyle2;
             this.dzien.HeaderText = "Dzień";
             this.dzien.MinimumWidth = 150;
             this.dzien.Name = "dzien";
@@ -472,8 +475,8 @@
             // 
             // sztuki
             // 
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sztuki.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sztuki.DefaultCellStyle = dataGridViewCellStyle3;
             this.sztuki.HeaderText = "Ilość sztuk";
             this.sztuki.MinimumWidth = 150;
             this.sztuki.Name = "sztuki";
@@ -490,7 +493,7 @@
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 319F));
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 209F));
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 258F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 267F));
             this.tableLayoutPanel13.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel13.Controls.Add(this.button2, 0, 0);
             this.tableLayoutPanel13.Controls.Add(this.load, 1, 0);
@@ -507,7 +510,7 @@
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(309, 6);
+            this.button1.Location = new System.Drawing.Point(300, 6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(210, 39);
             this.button1.TabIndex = 4;
@@ -520,7 +523,7 @@
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(22, 6);
+            this.button2.Location = new System.Drawing.Point(18, 6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(210, 39);
             this.button2.TabIndex = 2;
@@ -533,7 +536,7 @@
             this.load.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.load.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.load.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.load.Location = new System.Drawing.Point(580, 6);
+            this.load.Location = new System.Drawing.Point(571, 6);
             this.load.Name = "load";
             this.load.Size = new System.Drawing.Size(203, 39);
             this.load.TabIndex = 0;
@@ -546,7 +549,7 @@
             this.saveBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.saveBtn.BackColor = System.Drawing.Color.Lime;
             this.saveBtn.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.saveBtn.Location = new System.Drawing.Point(813, 6);
+            this.saveBtn.Location = new System.Drawing.Point(808, 6);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(210, 39);
             this.saveBtn.TabIndex = 3;
@@ -577,7 +580,7 @@
             this.tableLayoutPaneData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.2437F));
             this.tableLayoutPaneData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.7563F));
             this.tableLayoutPaneData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
-            this.tableLayoutPaneData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 507F));
+            this.tableLayoutPaneData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 519F));
             this.tableLayoutPaneData.Controls.Add(this.dateTimePickerDo, 1, 1);
             this.tableLayoutPaneData.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPaneData.Controls.Add(this.label4, 2, 1);
@@ -604,9 +607,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePickerDo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.dateTimePickerDo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerDo.Location = new System.Drawing.Point(143, 60);
+            this.dateTimePickerDo.Location = new System.Drawing.Point(139, 60);
             this.dateTimePickerDo.Name = "dateTimePickerDo";
-            this.dateTimePickerDo.Size = new System.Drawing.Size(253, 26);
+            this.dateTimePickerDo.Size = new System.Drawing.Size(245, 26);
             this.dateTimePickerDo.TabIndex = 10;
             // 
             // label2
@@ -623,7 +626,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(405, 57);
+            this.label4.Location = new System.Drawing.Point(393, 57);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 20);
             this.label4.TabIndex = 12;
@@ -645,16 +648,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePickerOd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.dateTimePickerOd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerOd.Location = new System.Drawing.Point(143, 6);
+            this.dateTimePickerOd.Location = new System.Drawing.Point(139, 6);
             this.dateTimePickerOd.Name = "dateTimePickerOd";
-            this.dateTimePickerOd.Size = new System.Drawing.Size(253, 26);
+            this.dateTimePickerOd.Size = new System.Drawing.Size(245, 26);
             this.dateTimePickerOd.TabIndex = 2;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label14.Location = new System.Drawing.Point(405, 3);
+            this.label14.Location = new System.Drawing.Point(393, 3);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(109, 40);
             this.label14.TabIndex = 4;
@@ -666,9 +669,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.itemPricetxt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.itemPricetxt.Location = new System.Drawing.Point(536, 6);
+            this.itemPricetxt.Location = new System.Drawing.Point(524, 6);
             this.itemPricetxt.Name = "itemPricetxt";
-            this.itemPricetxt.Size = new System.Drawing.Size(502, 27);
+            this.itemPricetxt.Size = new System.Drawing.Size(514, 27);
             this.itemPricetxt.TabIndex = 13;
             this.itemPricetxt.TextChanged += new System.EventHandler(this.SaveValidation);
             // 
@@ -678,9 +681,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cycleTimeTxt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cycleTimeTxt.Location = new System.Drawing.Point(536, 60);
+            this.cycleTimeTxt.Location = new System.Drawing.Point(524, 60);
             this.cycleTimeTxt.Name = "cycleTimeTxt";
-            this.cycleTimeTxt.Size = new System.Drawing.Size(502, 27);
+            this.cycleTimeTxt.Size = new System.Drawing.Size(514, 27);
             this.cycleTimeTxt.TabIndex = 14;
             this.cycleTimeTxt.TextChanged += new System.EventHandler(this.SaveValidation);
             // 
@@ -907,8 +910,8 @@
             this.tableLayoutPanelData.ColumnCount = 4;
             this.tableLayoutPanelData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 493F));
-            this.tableLayoutPanelData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
-            this.tableLayoutPanelData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 157F));
+            this.tableLayoutPanelData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+            this.tableLayoutPanelData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
             this.tableLayoutPanelData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanelData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanelData.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -922,15 +925,15 @@
             this.tableLayoutPanelData.Controls.Add(this.addModBtn, 2, 2);
             this.tableLayoutPanelData.Controls.Add(this.editProjektBtn, 3, 0);
             this.tableLayoutPanelData.Controls.Add(this.editSapBtn, 3, 1);
-            this.tableLayoutPanelData.Controls.Add(this.editModBtn, 3, 2);
             this.tableLayoutPanelData.Controls.Add(this.addSapBtn, 2, 1);
+            this.tableLayoutPanelData.Controls.Add(this.tableLayoutPanel4, 3, 2);
             this.tableLayoutPanelData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelData.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanelData.Name = "tableLayoutPanelData";
             this.tableLayoutPanelData.RowCount = 3;
-            this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.74725F));
-            this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.25275F));
-            this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.95833F));
+            this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.04167F));
+            this.tableLayoutPanelData.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.tableLayoutPanelData.Size = new System.Drawing.Size(1044, 145);
             this.tableLayoutPanelData.TabIndex = 6;
             // 
@@ -941,7 +944,7 @@
             this.combSap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combSap.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.combSap.FormattingEnabled = true;
-            this.combSap.Location = new System.Drawing.Point(269, 56);
+            this.combSap.Location = new System.Drawing.Point(325, 51);
             this.combSap.Name = "combSap";
             this.combSap.Size = new System.Drawing.Size(360, 25);
             this.combSap.TabIndex = 41;
@@ -953,7 +956,7 @@
             this.combMod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combMod.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.combMod.FormattingEnabled = true;
-            this.combMod.Location = new System.Drawing.Point(269, 102);
+            this.combMod.Location = new System.Drawing.Point(325, 98);
             this.combMod.Name = "combMod";
             this.combMod.Size = new System.Drawing.Size(360, 25);
             this.combMod.TabIndex = 39;
@@ -963,7 +966,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label31.Location = new System.Drawing.Point(6, 53);
+            this.label31.Location = new System.Drawing.Point(6, 48);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(107, 21);
             this.label31.TabIndex = 29;
@@ -976,7 +979,7 @@
             this.label30.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.label30.Location = new System.Drawing.Point(6, 3);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(254, 47);
+            this.label30.Size = new System.Drawing.Size(310, 42);
             this.label30.TabIndex = 27;
             this.label30.Text = "Wybierz Projekt:";
             // 
@@ -984,7 +987,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(6, 99);
+            this.label29.Location = new System.Drawing.Point(6, 95);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(167, 21);
             this.label29.TabIndex = 34;
@@ -995,7 +998,7 @@
             this.combProj.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combProj.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combProj.FormattingEnabled = true;
-            this.combProj.Location = new System.Drawing.Point(269, 6);
+            this.combProj.Location = new System.Drawing.Point(325, 6);
             this.combProj.Name = "combProj";
             this.combProj.Size = new System.Drawing.Size(360, 29);
             this.combProj.TabIndex = 42;
@@ -1008,7 +1011,7 @@
             this.addProjBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.addProjBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addProjBtn.BackgroundImage")));
             this.addProjBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.addProjBtn.Location = new System.Drawing.Point(801, 8);
+            this.addProjBtn.Location = new System.Drawing.Point(852, 6);
             this.addProjBtn.Name = "addProjBtn";
             this.addProjBtn.Size = new System.Drawing.Size(41, 36);
             this.addProjBtn.TabIndex = 43;
@@ -1021,7 +1024,7 @@
             this.addModBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.addModBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addModBtn.BackgroundImage")));
             this.addModBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.addModBtn.Location = new System.Drawing.Point(801, 102);
+            this.addModBtn.Location = new System.Drawing.Point(852, 100);
             this.addModBtn.Name = "addModBtn";
             this.addModBtn.Size = new System.Drawing.Size(41, 36);
             this.addModBtn.TabIndex = 45;
@@ -1034,7 +1037,7 @@
             this.editProjektBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.editProjektBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("editProjektBtn.BackgroundImage")));
             this.editProjektBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.editProjektBtn.Location = new System.Drawing.Point(942, 8);
+            this.editProjektBtn.Location = new System.Drawing.Point(965, 6);
             this.editProjektBtn.Name = "editProjektBtn";
             this.editProjektBtn.Size = new System.Drawing.Size(41, 36);
             this.editProjektBtn.TabIndex = 46;
@@ -1047,24 +1050,12 @@
             this.editSapBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.editSapBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("editSapBtn.BackgroundImage")));
             this.editSapBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.editSapBtn.Location = new System.Drawing.Point(942, 56);
+            this.editSapBtn.Location = new System.Drawing.Point(965, 52);
             this.editSapBtn.Name = "editSapBtn";
             this.editSapBtn.Size = new System.Drawing.Size(41, 36);
             this.editSapBtn.TabIndex = 47;
             this.editSapBtn.UseVisualStyleBackColor = false;
             this.editSapBtn.Click += new System.EventHandler(this.editSapBtn_Click);
-            // 
-            // editModBtn
-            // 
-            this.editModBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.editModBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.editModBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("editModBtn.BackgroundImage")));
-            this.editModBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.editModBtn.Location = new System.Drawing.Point(942, 102);
-            this.editModBtn.Name = "editModBtn";
-            this.editModBtn.Size = new System.Drawing.Size(41, 36);
-            this.editModBtn.TabIndex = 48;
-            this.editModBtn.UseVisualStyleBackColor = false;
             // 
             // addSapBtn
             // 
@@ -1072,12 +1063,48 @@
             this.addSapBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.addSapBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addSapBtn.BackgroundImage")));
             this.addSapBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.addSapBtn.Location = new System.Drawing.Point(801, 56);
+            this.addSapBtn.Location = new System.Drawing.Point(852, 52);
             this.addSapBtn.Name = "addSapBtn";
             this.addSapBtn.Size = new System.Drawing.Size(41, 36);
             this.addSapBtn.TabIndex = 44;
             this.addSapBtn.UseVisualStyleBackColor = false;
             this.addSapBtn.Click += new System.EventHandler(this.addSapBtn_Click);
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.editModBtn, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.button3, 1, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(934, 98);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(104, 41);
+            this.tableLayoutPanel4.TabIndex = 48;
+            // 
+            // editModBtn
+            // 
+            this.editModBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.editModBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.editModBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("editModBtn.BackgroundImage")));
+            this.editModBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.editModBtn.Location = new System.Drawing.Point(5, 3);
+            this.editModBtn.Name = "editModBtn";
+            this.editModBtn.Size = new System.Drawing.Size(41, 35);
+            this.editModBtn.TabIndex = 49;
+            this.editModBtn.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button3.Location = new System.Drawing.Point(55, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(41, 31);
+            this.button3.TabIndex = 50;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // SSC
             // 
@@ -1114,6 +1141,7 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanelData.ResumeLayout(false);
             this.tableLayoutPanelData.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1183,13 +1211,15 @@
         private System.Windows.Forms.Button addModBtn;
         private System.Windows.Forms.Button editProjektBtn;
         private System.Windows.Forms.Button editSapBtn;
-        private System.Windows.Forms.Button editModBtn;
         private System.Windows.Forms.Button addSapBtn;
         private System.Windows.Forms.Button saveBtn;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dzien;
         private System.Windows.Forms.DataGridViewTextBoxColumn sztuki;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Button editModBtn;
+        private System.Windows.Forms.Button button3;
     }
 }
 

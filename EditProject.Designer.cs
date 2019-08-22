@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditProject));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.combProEdit = new System.Windows.Forms.ComboBox();
+            this.newNameTxt = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.addBtn = new System.Windows.Forms.Button();
-            this.combProEdit = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.newNameTxt = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -76,6 +76,17 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(422, 99);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(19, 67);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(114, 21);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Nowa nazwa";
+            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -86,6 +97,25 @@
             this.label1.Size = new System.Drawing.Size(66, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Projekt:";
+            // 
+            // combProEdit
+            // 
+            this.combProEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.combProEdit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combProEdit.FormattingEnabled = true;
+            this.combProEdit.Location = new System.Drawing.Point(171, 13);
+            this.combProEdit.Name = "combProEdit";
+            this.combProEdit.Size = new System.Drawing.Size(232, 29);
+            this.combProEdit.TabIndex = 1;
+            // 
+            // newNameTxt
+            // 
+            this.newNameTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.newNameTxt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newNameTxt.Location = new System.Drawing.Point(170, 64);
+            this.newNameTxt.Name = "newNameTxt";
+            this.newNameTxt.Size = new System.Drawing.Size(234, 27);
+            this.newNameTxt.TabIndex = 3;
             // 
             // tableLayoutPanel3
             // 
@@ -123,39 +153,9 @@
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(205, 33);
             this.addBtn.TabIndex = 1;
-            this.addBtn.Text = "Zapisz zmianę";
+            this.addBtn.Text = "Dodaj";
             this.addBtn.UseVisualStyleBackColor = false;
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
-            // 
-            // combProEdit
-            // 
-            this.combProEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.combProEdit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combProEdit.FormattingEnabled = true;
-            this.combProEdit.Location = new System.Drawing.Point(171, 17);
-            this.combProEdit.Name = "combProEdit";
-            this.combProEdit.Size = new System.Drawing.Size(232, 29);
-            this.combProEdit.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 67);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 21);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Nowa nazwa";
-            // 
-            // newNameTxt
-            // 
-            this.newNameTxt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.newNameTxt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newNameTxt.Location = new System.Drawing.Point(170, 64);
-            this.newNameTxt.Name = "newNameTxt";
-            this.newNameTxt.Size = new System.Drawing.Size(234, 27);
-            this.newNameTxt.TabIndex = 3;
             // 
             // EditProject
             // 

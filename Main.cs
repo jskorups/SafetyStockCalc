@@ -47,8 +47,6 @@ namespace SafetyStockCalc
             return;
 
         }
-
-
         private void combSap_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             modLoad();
@@ -387,8 +385,6 @@ namespace SafetyStockCalc
         }
 
 
-
-
         private void SaveValidation(object sender, EventArgs e)
         {
 
@@ -403,6 +399,15 @@ namespace SafetyStockCalc
             {
                 saveBtn.Enabled = true;
             }
+        }
+
+        private void editModBtn_Click(object sender, EventArgs e)
+        {
+            using (var newdiv = new EditDeleteModification())
+                newdiv.ShowDialog();
+
+            projectLoad();
+            sapLoad();
         }
     }
 }
