@@ -68,6 +68,12 @@
       <DependentUpon>AddSAP.cs</DependentUpon>
     </Compile>
     <Compile Include="Calculation.cs" />
+    <Compile Include="DeleteModification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteModification.Designer.cs">
+      <DependentUpon>DeleteModification.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditDeleteModification.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,7 @@
     <Compile Include="EditSAP.Designer.cs">
       <DependentUpon>EditSAP.cs</DependentUpon>
     </Compile>
+    <Compile Include="fillCombos.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddSAP.resx">
       <DependentUpon>AddSAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteModification.resx">
+      <DependentUpon>DeleteModification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditDeleteModification.resx">
       <DependentUpon>EditDeleteModification.cs</DependentUpon>

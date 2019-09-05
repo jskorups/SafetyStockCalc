@@ -406,9 +406,15 @@ namespace SafetyStockCalc
             using (var newdiv = new EditDeleteModification())
                 newdiv.ShowDialog();
 
-            projectLoad();
+            //projectLoad();
             sapLoad();
         }
+
+        private void deleteModBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
 

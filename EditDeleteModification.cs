@@ -16,24 +16,27 @@ namespace SafetyStockCalc
         {
             InitializeComponent();
             editModProj.SelectedIndex = -1;
-            projectLoad();
+            fillCombos.fillCombo("select  * from Project", editModProj);
         }
 
-        public void projectLoad()
-        {
-            try
-            {
-                DataSet dP = sqlQuery.GetDataFromSql("select  * from Project;");
-                editModProj.DataSource = dP.Tables[0];
-                editModProj.ValueMember = "id";
-                editModProj.DisplayMember = "Project";
-            }
-            catch (Exception)
-            {
+      
+        //public void projectLoad()
+        //{
 
-                MessageBox.Show("Nie mozna pobrac projektów z bazdy danych");
-            }
-        }
+           
+            //try
+            //{
+            //    DataSet dP = sqlQuery.GetDataFromSql("select  * from Project;");
+            //    editModProj.DataSource = dP.Tables[0];
+            //    editModProj.ValueMember = "id";
+            //    editModProj.DisplayMember = "Project";
+            //}
+            //catch (Exception)
+            //{
+
+            //    MessageBox.Show("Nie mozna pobrac projektów z bazdy danych");
+            //}
+        //}
 
         public void sapLoad()
         {
