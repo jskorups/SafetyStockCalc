@@ -28,8 +28,6 @@ namespace SafetyStockCalc
             editSapPro.DisplayMember = "Project";
 
         }
-
-
         public void sapLoad()
         {
 
@@ -48,10 +46,7 @@ namespace SafetyStockCalc
 
                 MessageBox.Show("Nie mozna pobrac SAP z bazdy danych");
             }
-
-
         }
-
         private void editSapPro_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (editSapPro.SelectedIndex > -1)
@@ -71,33 +66,22 @@ namespace SafetyStockCalc
         {
             try
             {
-
                 string connectionStrin = ConfigurationManager.ConnectionStrings["SafetyStockCalc.Properties.Settings.ConnectionString"].ConnectionString;
                 System.Data.SqlClient.SqlConnection sqlConnection1 = new System.Data.SqlClient.SqlConnection(connectionStrin);
                 System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
                 cmd.CommandType = System.Data.CommandType.Text;
-
-
                 cmd.CommandText = "UPDATE SAP SET SAP = @newName WHERE id = @id";
-
-
                 cmd.Parameters.AddWithValue("@newName", newName.Text);
                 cmd.Parameters.AddWithValue("@id", editSapSap.SelectedValue);
-
-
-
                 cmd.Connection = sqlConnection1;
                 sqlConnection1.Open();
                 cmd.ExecuteNonQuery();
                 sqlConnection1.Close();
                 MessageBox.Show("Dodano do bazy danych pod nazwą");
                 this.Close();
-
-
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show("Coś poszło nie tak " + System.Environment.NewLine + "Sprawdz dane lub skontaktuj się z administratorem" + System.Environment.NewLine + ex.Message);
             }
         }

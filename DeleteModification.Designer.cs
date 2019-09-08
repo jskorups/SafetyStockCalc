@@ -38,9 +38,9 @@
             this.delModSapComb = new System.Windows.Forms.ComboBox();
             this.delModModComb = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.CancelAddSapBtn = new System.Windows.Forms.Button();
+            this.CancelDelModBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.addSapToDbBtn = new System.Windows.Forms.Button();
+            this.DelModFromDbBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -59,7 +59,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.66666F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(556, 259);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(428, 195);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // tableLayoutPanel2
@@ -78,9 +78,9 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(550, 166);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(422, 124);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // label3
@@ -88,7 +88,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(46, 133);
+            this.label3.Location = new System.Drawing.Point(23, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 21);
             this.label3.TabIndex = 5;
@@ -99,7 +99,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(66, 28);
+            this.label1.Location = new System.Drawing.Point(43, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 21);
             this.label1.TabIndex = 0;
@@ -111,17 +111,18 @@
             this.delModProjComb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.delModProjComb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delModProjComb.FormattingEnabled = true;
-            this.delModProjComb.Location = new System.Drawing.Point(266, 24);
+            this.delModProjComb.Location = new System.Drawing.Point(179, 5);
             this.delModProjComb.Name = "delModProjComb";
             this.delModProjComb.Size = new System.Drawing.Size(216, 29);
             this.delModProjComb.TabIndex = 1;
+            this.delModProjComb.SelectedIndexChanged += new System.EventHandler(this.delModProjComb_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(79, 89);
+            this.label2.Location = new System.Drawing.Point(56, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 21);
             this.label2.TabIndex = 3;
@@ -133,10 +134,11 @@
             this.delModSapComb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.delModSapComb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delModSapComb.FormattingEnabled = true;
-            this.delModSapComb.Location = new System.Drawing.Point(264, 85);
+            this.delModSapComb.Location = new System.Drawing.Point(178, 45);
             this.delModSapComb.Name = "delModSapComb";
-            this.delModSapComb.Size = new System.Drawing.Size(219, 29);
+            this.delModSapComb.Size = new System.Drawing.Size(217, 29);
             this.delModSapComb.TabIndex = 6;
+            this.delModSapComb.SelectedIndexChanged += new System.EventHandler(this.delModSapComb_SelectedIndexChanged);
             // 
             // delModModComb
             // 
@@ -144,7 +146,7 @@
             this.delModModComb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.delModModComb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.delModModComb.FormattingEnabled = true;
-            this.delModModComb.Location = new System.Drawing.Point(265, 129);
+            this.delModModComb.Location = new System.Drawing.Point(178, 87);
             this.delModModComb.Name = "delModModComb";
             this.delModModComb.Size = new System.Drawing.Size(218, 29);
             this.delModModComb.TabIndex = 7;
@@ -154,58 +156,60 @@
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.CancelAddSapBtn, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.CancelDelModBtn, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 175);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 133);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(550, 81);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(422, 59);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
-            // CancelAddSapBtn
+            // CancelDelModBtn
             // 
-            this.CancelAddSapBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CancelAddSapBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.CancelAddSapBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelAddSapBtn.Location = new System.Drawing.Point(35, 24);
-            this.CancelAddSapBtn.Name = "CancelAddSapBtn";
-            this.CancelAddSapBtn.Size = new System.Drawing.Size(205, 33);
-            this.CancelAddSapBtn.TabIndex = 0;
-            this.CancelAddSapBtn.Text = "Anuluj";
-            this.CancelAddSapBtn.UseVisualStyleBackColor = false;
+            this.CancelDelModBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CancelDelModBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.CancelDelModBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelDelModBtn.Location = new System.Drawing.Point(3, 13);
+            this.CancelDelModBtn.Name = "CancelDelModBtn";
+            this.CancelDelModBtn.Size = new System.Drawing.Size(205, 33);
+            this.CancelDelModBtn.TabIndex = 0;
+            this.CancelDelModBtn.Text = "Anuluj";
+            this.CancelDelModBtn.UseVisualStyleBackColor = false;
+            this.CancelDelModBtn.Click += new System.EventHandler(this.CancelDelModBtn_Click);
             // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Controls.Add(this.addSapToDbBtn, 0, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(278, 3);
+            this.tableLayoutPanel4.Controls.Add(this.DelModFromDbBtn, 0, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(214, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(269, 75);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(205, 53);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
-            // addSapToDbBtn
+            // DelModFromDbBtn
             // 
-            this.addSapToDbBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.addSapToDbBtn.BackColor = System.Drawing.Color.Red;
-            this.addSapToDbBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addSapToDbBtn.Location = new System.Drawing.Point(32, 21);
-            this.addSapToDbBtn.Name = "addSapToDbBtn";
-            this.addSapToDbBtn.Size = new System.Drawing.Size(205, 33);
-            this.addSapToDbBtn.TabIndex = 2;
-            this.addSapToDbBtn.Text = "Usuń";
-            this.addSapToDbBtn.UseVisualStyleBackColor = false;
+            this.DelModFromDbBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DelModFromDbBtn.BackColor = System.Drawing.Color.Red;
+            this.DelModFromDbBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DelModFromDbBtn.Location = new System.Drawing.Point(3, 10);
+            this.DelModFromDbBtn.Name = "DelModFromDbBtn";
+            this.DelModFromDbBtn.Size = new System.Drawing.Size(199, 33);
+            this.DelModFromDbBtn.TabIndex = 2;
+            this.DelModFromDbBtn.Text = "Usuń";
+            this.DelModFromDbBtn.UseVisualStyleBackColor = false;
+            this.DelModFromDbBtn.Click += new System.EventHandler(this.DelModFromDbBtn_Click);
             // 
             // DeleteModification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(556, 259);
+            this.ClientSize = new System.Drawing.Size(428, 195);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DeleteModification";
@@ -230,8 +234,8 @@
         private System.Windows.Forms.ComboBox delModSapComb;
         private System.Windows.Forms.ComboBox delModModComb;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Button CancelAddSapBtn;
+        private System.Windows.Forms.Button CancelDelModBtn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Button addSapToDbBtn;
+        private System.Windows.Forms.Button DelModFromDbBtn;
     }
 }

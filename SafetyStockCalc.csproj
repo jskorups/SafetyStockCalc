@@ -74,11 +74,11 @@
     <Compile Include="DeleteModification.Designer.cs">
       <DependentUpon>DeleteModification.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditDeleteModification.cs">
+    <Compile Include="EditModification.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditDeleteModification.Designer.cs">
-      <DependentUpon>EditDeleteModification.cs</DependentUpon>
+    <Compile Include="EditModification.Designer.cs">
+      <DependentUpon>EditModification.cs</DependentUpon>
     </Compile>
     <Compile Include="EditProject.cs">
       <SubType>Form</SubType>
@@ -115,8 +115,8 @@
     <EmbeddedResource Include="DeleteModification.resx">
       <DependentUpon>DeleteModification.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditDeleteModification.resx">
-      <DependentUpon>EditDeleteModification.cs</DependentUpon>
+    <EmbeddedResource Include="EditModification.resx">
+      <DependentUpon>EditModification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditProject.resx">
       <DependentUpon>EditProject.cs</DependentUpon>

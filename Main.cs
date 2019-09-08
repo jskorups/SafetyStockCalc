@@ -148,7 +148,7 @@ namespace SafetyStockCalc
 
             try
             {
-                Calculation newCalc = new Calculation(combSap.Text, combMod.Text, Convert.ToDateTime(dateTimePickerOd.Text), Convert.ToDateTime(dateTimePickerDo.Text), Convert.ToInt32(itemPricetxt.Text), Convert.ToInt32(cycleTimeTxt.Text),
+                Calculation newCalc = new Calculation(combSap.Text, combMod.Text, Convert.ToDateTime(dateTimePickerOd.Text), Convert.ToDateTime(dateTimePickerDo.Text), Convert.ToDecimal(itemPricetxt.Text), Convert.ToInt32(cycleTimeTxt.Text),
                 Convert.ToInt32(week1Txt.Text), Convert.ToInt32(week2Txt.Text), Convert.ToInt32(week3Txt.Text), Convert.ToInt32(week4Txt.Text), Convert.ToInt32(week5Txt.Text));
 
 
@@ -196,7 +196,7 @@ namespace SafetyStockCalc
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Sprawdz poprawność wprowadzonych danych");
+                MessageBox.Show(/*"Sprawdz poprawność wprowadzonych danych"*/ ex.Message);
             }
 
         }
@@ -403,7 +403,7 @@ namespace SafetyStockCalc
 
         private void editModBtn_Click(object sender, EventArgs e)
         {
-            using (var newdiv = new EditDeleteModification())
+            using (var newdiv = new EditModification())
                 newdiv.ShowDialog();
 
             //projectLoad();
@@ -412,7 +412,8 @@ namespace SafetyStockCalc
 
         private void deleteModBtn_Click(object sender, EventArgs e)
         {
-
+            using (var newdiv = new DeleteModification())
+                newdiv.ShowDialog();
         }
 
     }
