@@ -224,9 +224,10 @@
             this.addSapToDbBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addSapToDbBtn.Location = new System.Drawing.Point(3, 21);
             this.addSapToDbBtn.Name = "addSapToDbBtn";
+            this.addSapToDbBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.addSapToDbBtn.Size = new System.Drawing.Size(199, 33);
             this.addSapToDbBtn.TabIndex = 2;
-            this.addSapToDbBtn.Text = "Dodaj";
+            this.addSapToDbBtn.Text = "Zmień";
             this.addSapToDbBtn.UseVisualStyleBackColor = false;
             this.addSapToDbBtn.Click += new System.EventHandler(this.addSapToDbBtn_Click);
             // 

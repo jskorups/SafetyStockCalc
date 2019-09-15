@@ -16,29 +16,14 @@ namespace SafetyStockCalc
         public AddSAP()
         {
             InitializeComponent();
-            projectLoad();
-           
+            fillCombos.fillComboWithProject(addSAPprojectCmb);          
         }
-
         private void cancelSAPBtn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        public void projectLoad ()
-        {
-            
-            DataSet dP = sqlQuery.GetDataFromSql("select  * from Project;");
-            addSAPprojectCmb.DataSource = dP.Tables[0];
-            addSAPprojectCmb.ValueMember = "id";
-            addSAPprojectCmb.DisplayMember = "Project";
-            addSAPprojectCmb.SelectedIndex = -1;
-        }
-
-
         private void addSapBtn_Click(object sender, EventArgs e)
-        {
-   
+        { 
             try
             {
 

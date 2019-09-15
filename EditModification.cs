@@ -19,58 +19,7 @@ namespace SafetyStockCalc
             editModProj.SelectedIndex = -1;
             fillCombos.fillComboWithProject(editModProj);
         }
-
-        #region OLD LOAD COMBOS
-        //public void projectLoad()
-        //{
-
-
-        //try
-        //{
-        //    DataSet dP = sqlQuery.GetDataFromSql("select  * from Project;");
-        //    editModProj.DataSource = dP.Tables[0];
-        //    editModProj.ValueMember = "id";
-        //    editModProj.DisplayMember = "Project";
-        //}
-        //catch (Exception)
-        //{
-
-        //    MessageBox.Show("Nie mozna pobrac projektów z bazdy danych");
-        //}
-        //}
-
-        //public void sapLoad()
-        //{
-        //    try
-        //    {
-        //        DataSet dP = sqlQuery.GetDataFromSql("select * from SAP where idProject = (select id from Project where Project = '" + editModProj.Text + "')");
-        //        editModSap.DataSource = dP.Tables[0];
-
-        //        //combSapNewMod.DataSource = dP2.Tables[0];
-        //        editModSap.ValueMember = "id";
-        //        editModSap.DisplayMember = "SAP";
-        //        //combSapNewMod.ValueMember = "SAP";
-        //    }
-        //    catch (Exception)
-        //    {
-
-        //        MessageBox.Show("Nie mozna pobrac SAP z bazdy danych");
-        //    }
-        //}
-
-
-        //public void modLoad()
-        //{
-        //    DataSet dP = sqlQuery.GetDataFromSql("select * from Modifications where SAPid = (select id from SAP where SAP = '" + editModSap.Text + "')");
-        //    editModMod.DataSource = dP.Tables[0];
-
-        //    //combSapNewMod.DataSource = dP2.Tables[0];
-        //    editModMod.ValueMember = "id";
-        //    editModMod.DisplayMember = "modName";
-        //    //combSapNewMod.ValueMember = "SAP";
-        //}
-
-        #endregion
+        
 
         private void editModPro_SelectedIndexChanged(object sender, EventArgs e)
         {

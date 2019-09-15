@@ -16,8 +16,10 @@ namespace SafetyStockCalc
         public AddModification()
         {
             InitializeComponent();
-            projectLoad();
-            sapLoad();
+            fillCombos.fillComboWithProject(ProjektComb);
+            //projectLoad();
+            fillCombos.fillComboWithSAPbyProject(SAPcomb, ProjektComb);
+            //sapLoad();
             AddModBtn.Enabled = false;
             DelModBtn.Enabled = false;
         }
@@ -50,36 +52,9 @@ namespace SafetyStockCalc
                 MessageBox.Show(ee.Message + "Nie można dodać do bazy danych");
             }
         }
-
-
-        public void projectLoad()
-        {
-            DataSet dP = sqlQuery.GetDataFromSql("select  * from Project;");
-            ProjektComb.DataSource = dP.Tables[0];
-            ProjektComb.ValueMember = "id";
-            ProjektComb.DisplayMember = "Project";
-
-        }
-
-        public void sapLoad()
-        {
-
-            DataSet dP = sqlQuery.GetDataFromSql("select  * from SAP where idProject = '" + ProjektComb.SelectedValue + "'");
-            SAPcomb.DataSource = dP.Tables[0];
-            SAPcomb.ValueMember = "id";
-            SAPcomb.DisplayMember = "SAP";
-     
-        }
-
         private void ProjektComb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataSet dP = sqlQuery.GetDataFromSql("select * from SAP where idProject = (select id from Project where Project = '" + ProjektComb.Text + "')");
-            SAPcomb.DataSource = dP.Tables[0];
-
-            //combSapNewMod.DataSource = dP2.Tables[0];
-            SAPcomb.ValueMember = "id";
-            SAPcomb.DisplayMember = "SAP";
-            //combSapNewMod.ValueMember = "SAP";
+            fillCombos.fillComboWithSAPbyProject(SAPcomb, ProjektComb);
         }
 
         private void modTxt_TextChanged(object sender, EventArgs e)

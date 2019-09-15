@@ -16,43 +16,18 @@ namespace SafetyStockCalc
         public EditSAP()
         {
             InitializeComponent();
-            projectLoad();
+            fillCombos.fillComboWithProject(editSapPro);
+            fillCombos.fillComboWithSAPbyProject(editSapSap, editSapPro);
             editSapPro.SelectedValue = -1;
         }
-
-        public void projectLoad()
-        {
-            DataSet dP = sqlQuery.GetDataFromSql("select  * from Project;");
-            editSapPro.DataSource = dP.Tables[0];
-            editSapPro.ValueMember = "id";
-            editSapPro.DisplayMember = "Project";
-
-        }
-        public void sapLoad()
-        {
-
-            try
-            {
-                DataSet dP = sqlQuery.GetDataFromSql("select * from SAP where idProject = (select id from Project where Project = '" + editSapPro.Text + "')");
-                editSapSap.DataSource = dP.Tables[0];
-
-                //combSapNewMod.DataSource = dP2.Tables[0];
-                editSapSap.ValueMember = "id";
-                editSapSap.DisplayMember = "SAP";
-                //combSapNewMod.ValueMember = "SAP";
-            }
-            catch (Exception)
-            {
-
-                MessageBox.Show("Nie mozna pobrac SAP z bazdy danych");
-            }
-        }
+   
+      
         private void editSapPro_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (editSapPro.SelectedIndex > -1)
             {
-                sapLoad();
-           
+                fillCombos.fillComboWithSAPbyProject(editSapSap, editSapPro);
+
             }
             return;
         }

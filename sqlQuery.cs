@@ -16,7 +16,10 @@ namespace SafetyStockCalc
             DataSet ds = new DataSet();
             string conString = ConfigurationManager.ConnectionStrings["SafetyStockCalc.Properties.Settings.ConnectionString"].ConnectionString;
             SqlConnection con = new SqlConnection(conString);
+            //foreach (var item in parameters)
+            //{
 
+            //}
             using (con)
             {
                 con.Open();

@@ -182,7 +182,7 @@
             this.addSapToDbBtn.Name = "addSapToDbBtn";
             this.addSapToDbBtn.Size = new System.Drawing.Size(205, 33);
             this.addSapToDbBtn.TabIndex = 1;
-            this.addSapToDbBtn.Text = "Dodaj";
+            this.addSapToDbBtn.Text = "Zmień";
             this.addSapToDbBtn.UseVisualStyleBackColor = false;
             this.addSapToDbBtn.Click += new System.EventHandler(this.addSapToDbBtn_Click);
             // 
